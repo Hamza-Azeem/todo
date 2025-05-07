@@ -6,6 +6,7 @@ import com.todo.todolist.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,11 +27,6 @@ public class UserController {
         return ResponseEntity.ok(userService.findUserById(id));
     }
 
-    @PostMapping
-    private ResponseEntity<String> addUser(@RequestBody UserRegistrationRequest registrationRequest){
-        userService.addNewUser(registrationRequest);
-        return new ResponseEntity<>("User created successfully.", HttpStatus.CREATED);
-    }
 
     @PutMapping("/{id}")
     private ResponseEntity<String> updateUser(@PathVariable int id, @RequestBody UserDto userDto){

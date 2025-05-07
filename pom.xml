@@ -33,6 +33,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -40,13 +41,26 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.jdbi</groupId>
+			<artifactId>jdbi3-core</artifactId>
+			<version>3.49.3</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.jdbi</groupId>
-			<artifactId>jdbi</artifactId>
-			<version>2.78</version>
+			<artifactId>jdbi3-postgres</artifactId>
+			<version>3.49.3</version>
 		</dependency>
 
 		<dependency>

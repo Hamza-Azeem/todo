@@ -8,6 +8,8 @@ import com.todo.todolist.mapper.UserMapper;
 import com.todo.todolist.model.UserRegistrationRequest;
 import com.todo.todolist.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,27 +21,30 @@ import static com.todo.todolist.mapper.UserMapper.toUserDto;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository repository;
+    private final PasswordEncoder passwordEncoder;
 
+    @PreAuthorize("@permissionService.isAdmin()")
     public List<UserDto> findAllUsers(){
         return repository.findAllUsers().stream()
                 .map(UserMapper::toUserDto).collect(Collectors.toList());
     }
 
-    public int addNewUser(UserRegistrationRequest registrationRequest){
-        if(repository.userExistsByEmail(registrationRequest.getEmail()) >= 1){
+    public void addNewUser(UserRegistrationRequest registrationRequest){
+        if(repository.userExistsByEmail(registrationRequest.getEmail()) != null){
             throw new DuplicateResourceException("Email is linked to another account.");
         }
         User user = User.builder()
                 .firstName(registrationRequest.getFirstName())
                 .lastName(registrationRequest.getLastName())
                 .email(registrationRequest.getEmail())
-                .password(registrationRequest.getPassword())
+                .password(passwordEncoder.encode(registrationRequest.getPassword()))
                 .status("INIT")
                 .userType("USER")
                 .build();
-        return repository.addUser(user);
+        repository.saveUser(user);
     }
 
+    @PreAuthorize("@permissionService.isSameUser(#id) || @permissionService.isAdmin()")
     public UserDto findUserById(int id){
         User user = repository.findUserById(id);
         if(user == null){
@@ -48,24 +53,43 @@ public class UserService {
         return toUserDto(user);
     }
 
-    public int updateUser(int id, UserDto userDto){
-        if(repository.userExistsByEmail(userDto.getEmail()) >= 1){
+    public User findUserByEmail(String email){
+        return repository.findUserByEmail(email);
+    }
+
+    @PreAuthorize("@permissionService.isSameUser(#id) || @permissionService.isAdmin()")
+    public void updateUser(int id, UserDto userDto){
+        if(repository.userExistsByEmail(userDto.getEmail()) != null){
             throw new DuplicateResourceException("Email is linked to another account.");
         }
         User user = repository.findUserById(id);
+        if(user == null){
+            throw new ResourceNotFoundException("User not found");
+        }
+        boolean updated = false;
         if(userDto.getEmail() != null && !userDto.getEmail().isBlank()){
             user.setEmail(userDto.getEmail());
+            updated = true;
         }
         if(userDto.getFirstName() != null && !userDto.getFirstName().isBlank()){
             user.setFirstName(userDto.getFirstName());
+            updated = true;
         }
         if(userDto.getLastName() != null && !userDto.getLastName().isBlank()){
             user.setLastName(userDto.getLastName());
+            updated = true;
         }
-        return repository.updateUser(user);
+        if(userDto.getPassword() != null && !userDto.getPassword().isBlank()){
+            user.setPassword(passwordEncoder.encode(userDto.getPassword()));
+            updated = true;
+        }
+        if(updated){
+            repository.updateUser(user);
+        }
     }
 
-    public int deleteUserById(int id){
-        return repository.deleteUserById(id);
+    @PreAuthorize("@permissionService.isSameUser(#id) || @permissionService.isAdmin()")
+    public void deleteUserById(int id){
+        repository.deleteUserById(id);
     }
 }

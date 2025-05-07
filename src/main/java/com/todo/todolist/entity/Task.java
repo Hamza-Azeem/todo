@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.jdbi.v3.core.mapper.reflect.ColumnName;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -12,9 +13,12 @@ import lombok.Setter;
 @Getter
 @Builder
 public class Task {
+    @ColumnName("task_id")
     private Integer taskId;
     private String name;
-    private int userId;
+    @ColumnName("user_id")
+    private Integer userId;
+    @ColumnName("status_id")
     private int statusId;
     
 }
