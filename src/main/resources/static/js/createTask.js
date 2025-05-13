@@ -7,6 +7,7 @@ export default async function createTask(userId, taskRequest){
             },
             body: JSON.stringify(taskRequest)
         });
+        console.log("TASK CREATED");
         if(!resp.ok){
             throw new Error("REQUEST_DENIED");
         }

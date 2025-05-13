@@ -3,7 +3,6 @@ package com.todo.todolist.service;
 import com.todo.todolist.dto.TaskDto;
 import com.todo.todolist.dto.UserDto;
 import com.todo.todolist.entity.Task;
-import com.todo.todolist.entity.User;
 import com.todo.todolist.exception.ResourceNotFoundException;
 import com.todo.todolist.mapper.TaskMapper;
 import com.todo.todolist.model.TaskCreationRequest;
@@ -11,8 +10,6 @@ import com.todo.todolist.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,7 +44,6 @@ public class TaskService {
         }
         if(task.getUserId() != userId){
             throw new AccessDeniedException("ACCESS_DENIED");
-
         }
         boolean updated = false;
         if(taskDto.getName() != null && !taskDto.getName().isBlank()){

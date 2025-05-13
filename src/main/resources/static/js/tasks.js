@@ -11,6 +11,7 @@ const modelContent = document.querySelector('.modal-body');
 const addTaskBtn = document.querySelector('#addTaskBtn');
 let tbody = document.createElement('tbody');
 const saveChangesBtn = document.querySelector("#saveChangesBtn");
+table.appendChild(tbody);
 
 const taskStatusMapper = {
     1: 'Pending',
@@ -36,11 +37,15 @@ async function main() {
 
     let data = await fetchAllUsersTasks(id);
     await showTasks(data);
+    await complete();
+    await update(data);
+    await deleteTask();
+    await createNewTasks();
 }
 
 async function showTasks(tasks) {
-
-    table.appendChild(tbody);
+    tbody.textContent = '';
+    
     let index = -1;
     for (let task of tasks) {
         index++;
@@ -87,20 +92,34 @@ async function showTasks(tasks) {
         deleteTd.appendChild(deleteBtn);
         tr.appendChild(deleteTd);
         tbody.appendChild(tr);
+    }
+}
 
-        complete.addEventListener(
+
+
+await main();
+
+async function complete() {
+    const completeBtns = document.querySelectorAll('.btn-success');
+    for (let btn of completeBtns) {
+        btn.addEventListener(
             'click',
             async function () {
                 let finishedTask = {
                     'status': 3
                 };
-                await updateTask(finishedTask, id, complete.getAttribute('taskId'));
-                table.removeChild(tbody);
+                await updateTask(finishedTask, id, btn.getAttribute('taskId'));
+                // table.removeChild(tbody);
                 tbody.textContent = '';
                 await main();
             }
-        )
+        );
+    }
+}
 
+async function update(tasks) {
+    const updateBtns = document.querySelectorAll('.btn-warning');
+    for (let updateBtn of updateBtns) {
         updateBtn.addEventListener(
             'click',
             async function () {
@@ -143,85 +162,82 @@ async function showTasks(tasks) {
                 modelContent.appendChild(titleDiv);
                 modelContent.appendChild(statusDiv);
                 myModal.show();
-        
-                saveChangesBtn.addEventListener(
-                    'click',
-                    async function () {
-                        let updatedTask = {
-                            'name': nameInput.value,
-                            'status': statusSelect.value
-                        }
-                        await updateTask(updatedTask, id, task.id);
-                        table.removeChild(tbody);  // raises an error.
-                        tbody.innerText = '';
-                        await main();
-                    }
-                )
+                await saveChanges(nameInput, statusSelect, task.id);
             }
         )
+    }
+}
+
+async function saveChanges(nameInput, statusSelect, taskId) {
+    saveChangesBtn.onclick = 
+        async function(){
+            let updatedTask = {
+                'name': nameInput.value,
+                'status': statusSelect.value
+            }
+            await updateTask(updatedTask, id, taskId);
+            await main();
+        };
+}
+
+async function createChanges(nameInput, statusSelect) {
+    saveChangesBtn.onclick = 
+        async function(){
+            let updatedTask = {
+                'name': nameInput.value,
+                'status': statusSelect.value
+            }
+            await createTask(id, updatedTask);
+            await main();
+        };
+}
+
+async function deleteTask(){
+    const deleteBtns = document.querySelectorAll('.btn-danger');
+    for(let deleteBtn of deleteBtns){
         deleteBtn.addEventListener(
             'click',
             async function () {
                 await deleteTaskById(id, deleteBtn.getAttribute('taskId'));
-                table.removeChild(tbody);
-                tbody.innerText = '';
                 await main();
             }
         )
     }
 }
 
-addTaskBtn.addEventListener('click', async function () {
-    modelContent.textContent = "";
-    // Title input
-    let titleDiv = document.createElement('div');
-    titleDiv.textContent = 'Title: ';
-    let nameInput = document.createElement('input');
-    nameInput.classList.add('form-control');
-    nameInput.placeholder = "Enter task title"
-    titleDiv.appendChild(nameInput);
-
-    // Status input
-    let statusDiv = document.createElement('div');
-    statusDiv.textContent = 'Status: ';
-    let statusSelect = document.createElement('select');
-    statusSelect.classList.add('form-select');
-    const statusOptions = [
-        { value: 1, label: 'Pending' },
-        { value: 2, label: 'Started' },
-        { value: 3, label: 'Completed' }
-    ];
+async function createNewTasks() {
+    addTaskBtn.onclick = async function () {
+        modelContent.textContent = "";
+        // Title input
+        let titleDiv = document.createElement('div');
+        titleDiv.textContent = 'Title: ';
+        let nameInput = document.createElement('input');
+        nameInput.classList.add('form-control');
+        nameInput.placeholder = "Enter task title"
+        titleDiv.appendChild(nameInput);
     
-    statusOptions.forEach(option => {
-        const opt = document.createElement('option');
-        opt.value = option.value;
-        opt.textContent = option.label;
-        statusSelect.appendChild(opt);
-    });
-
-    statusDiv.appendChild(statusSelect);
-    modelContent.appendChild(titleDiv);
-    modelContent.appendChild(statusDiv);
-    myModal.show();
+        // Status input
+        let statusDiv = document.createElement('div');
+        statusDiv.textContent = 'Status: ';
+        let statusSelect = document.createElement('select');
+        statusSelect.classList.add('form-select');
+        const statusOptions = [
+            { value: 1, label: 'Pending' },
+            { value: 2, label: 'Started' },
+            { value: 3, label: 'Completed' }
+        ];
     
-    // Create a one-time event handler
-    async function handleSave() {
-        let createdTask = {
-            'name': nameInput.value,
-            'status': statusSelect.value
-        }
-        await createTask(id, createdTask);
-        table.removeChild(tbody);
-        tbody.innerText = '';
-        await main();
-        // Remove the listener after execution
-        saveChangesBtn.removeEventListener('click', handleSave);
-    }
+        statusOptions.forEach(option => {
+            const opt = document.createElement('option');
+            opt.value = option.value;
+            opt.textContent = option.label;
+            statusSelect.appendChild(opt);
+        });
     
-    // Remove any existing listeners first to ensure no duplicates
-    saveChangesBtn.removeEventListener('click', handleSave);
-    // Add the new listener
-    saveChangesBtn.addEventListener('click', handleSave);
-});
-
-await main();
+        statusDiv.appendChild(statusSelect);
+        modelContent.appendChild(titleDiv);
+        modelContent.appendChild(statusDiv);
+        myModal.show();
+        await createChanges(nameInput, statusSelect);
+    };
+}
