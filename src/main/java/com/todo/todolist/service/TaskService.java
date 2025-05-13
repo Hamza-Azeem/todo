@@ -1,6 +1,7 @@
 package com.todo.todolist.service;
 
 import com.todo.todolist.dto.TaskDto;
+import com.todo.todolist.dto.UserDto;
 import com.todo.todolist.entity.Task;
 import com.todo.todolist.entity.User;
 import com.todo.todolist.exception.ResourceNotFoundException;
@@ -25,12 +26,11 @@ public class TaskService {
     private final TaskRepository repository;
     private final UserService userService;
 
-    public void createTask(TaskCreationRequest request){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findUserByEmail(authentication.getName());
-        if(!user.getStatus().equals("ACT")){
-            throw new AccessDeniedException("ACCESS DENIED");
-        }
+    public void createTask(int userId, TaskCreationRequest request){
+        UserDto user = userService.findUserById(userId);
+        // if(!user.getStatus().equals("ACT")){
+        //     throw new AccessDeniedException("ACCESS DENIED");
+        // }
         Task task = Task.builder()
                 .name(request.getName())
                 .statusId(request.getStatus())

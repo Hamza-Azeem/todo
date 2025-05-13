@@ -32,7 +32,7 @@ public interface TaskRepository {
     @RegisterBeanMapper(Task.class)
     int addNewTask(@BindBean Task task);
 
-    @SqlUpdate("UPDATE tasks SET name = :name, status_id = :statusId WHERE user_id = :userId")
+    @SqlUpdate("UPDATE tasks SET name = :name, status_id = :statusId WHERE user_id = :userId AND task_id = :taskId")
     @RegisterBeanMapper(Task.class)
     int updateTask(@BindBean Task task);
 

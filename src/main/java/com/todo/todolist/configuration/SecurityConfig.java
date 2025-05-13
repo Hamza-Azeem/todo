@@ -19,7 +19,7 @@ public class SecurityConfig {
         https.authorizeHttpRequests(
                 auth -> {
                     auth.antMatchers("/auth/**").permitAll();
-                    auth.anyRequest().authenticated();
+                    auth.anyRequest().permitAll(); // test
                 }
         );
         return https.build();

@@ -13,6 +13,8 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/tasks")
+@CrossOrigin(origins = "*")
+
 public class TaskController {
     private final TaskService taskService;
 
@@ -26,9 +28,9 @@ public class TaskController {
         return ResponseEntity.ok(taskService.findAllTasksByUserId(userId));
     }
 
-    @PostMapping
-    private ResponseEntity<Void> addTask(@RequestBody TaskCreationRequest request){
-        taskService.createTask(request);
+    @PostMapping("/{userId}")
+    private ResponseEntity<Void> addTask(@PathVariable int userId, @RequestBody TaskCreationRequest request){
+        taskService.createTask(userId, request);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
