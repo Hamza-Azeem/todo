@@ -5,7 +5,6 @@ import com.todo.todolist.entity.User;
 import com.todo.todolist.exception.DuplicateResourceException;
 import com.todo.todolist.exception.ResourceNotFoundException;
 import com.todo.todolist.mapper.UserMapper;
-import com.todo.todolist.model.UserRegistrationRequest;
 import com.todo.todolist.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,25 +22,12 @@ public class UserService {
     private final UserRepository repository;
     private final PasswordEncoder passwordEncoder;
 
+
+
     @PreAuthorize("@permissionService.isAdmin()")
     public List<UserDto> findAllUsers(){
         return repository.findAllUsers().stream()
                 .map(UserMapper::toUserDto).collect(Collectors.toList());
-    }
-
-    public void addNewUser(UserRegistrationRequest registrationRequest){
-        if(repository.userExistsByEmail(registrationRequest.getEmail()) != null){
-            throw new DuplicateResourceException("Email is linked to another account.");
-        }
-        User user = User.builder()
-                .firstName(registrationRequest.getFirstName())
-                .lastName(registrationRequest.getLastName())
-                .email(registrationRequest.getEmail())
-                .password(passwordEncoder.encode(registrationRequest.getPassword()))
-                .status("INIT")
-                .userType("USER")
-                .build();
-        repository.saveUser(user);
     }
 
     @PreAuthorize("@permissionService.isSameUser(#id) || @permissionService.isAdmin()")
@@ -92,4 +78,14 @@ public class UserService {
     public void deleteUserById(int id){
         repository.deleteUserById(id);
     }
+
+    public boolean userExistsByEmail(String email){
+        return repository.userExistsByEmail(email).orElse(0) > 0;
+    }
+
+    public void saveUser(User user){
+        repository.saveUser(user);
+    }
+
+
 }

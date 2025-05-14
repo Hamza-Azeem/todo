@@ -3,6 +3,7 @@ package com.todo.todolist.configuration;
 import com.todo.todolist.repository.TaskRepository;
 import com.todo.todolist.repository.TaskStatusRepository;
 import com.todo.todolist.repository.UserRepository;
+import com.todo.todolist.repository.UserTokenRepository;
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.postgres.PostgresPlugin;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
@@ -50,5 +51,10 @@ public class DatasourceConfig {
     @Bean
     public TaskStatusRepository taskStatusRepository(Jdbi jdbi) {
         return jdbi.onDemand(TaskStatusRepository.class);
+    }
+
+    @Bean
+    public UserTokenRepository userTokenRepository(Jdbi jdbi) {
+        return jdbi.onDemand(UserTokenRepository.class);
     }
 }

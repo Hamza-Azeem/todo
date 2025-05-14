@@ -10,6 +10,7 @@ import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @RegisterBeanMapper(User.class)
@@ -35,7 +36,8 @@ public interface UserRepository {
     int deleteUserById(@Bind int id);
 
     @SqlQuery("SELECT 1 FROM users WHERE email = :email LIMIT 1")
-    Integer userExistsByEmail(@Bind String email);
+    Optional<Integer> userExistsByEmail(@Bind String email);
+
 
     @SqlQuery("SELECT * FROM users WHERE email = :email LIMIT 1")
     User findUserByEmail(@Bind String email);

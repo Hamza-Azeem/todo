@@ -20,5 +20,10 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(new Error(ex.getMessage(), HttpStatus.NOT_FOUND.value(), LocalDateTime.now()),
                 HttpStatus.NOT_FOUND);
     }
+    @ExceptionHandler(InvalidTokenException.class)
+    public ResponseEntity<Error> handleInvalidTokenException(InvalidTokenException ex){
+        return new ResponseEntity<>(new Error(ex.getMessage(), HttpStatus.UNAUTHORIZED.value(), LocalDateTime.now()),
+                HttpStatus.UNAUTHORIZED);
+    }
 
 }

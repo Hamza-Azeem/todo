@@ -29,4 +29,7 @@ public class AdminController {
     public ResponseEntity<List<TaskDto>> findAllTasks(){
         return ResponseEntity.ok(taskService.findAllTasks());
     }
+
+
+
 }
