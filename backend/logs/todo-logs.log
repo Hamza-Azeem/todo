@@ -3477,3 +3477,356 @@ java.lang.UnsupportedOperationException: null
 2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - Generating New Token
 2025-05-21 16:38:24 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
 2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:55:52 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:55:52 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:55:54 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:55:54 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:56:01 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:56:01 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:56:02 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:56:02 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:56:04 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:56:04 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:57:43 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:57:43 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:58:47 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:58:47 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:59:27 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:59:27 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:01:03 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:01:03 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:01:46 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:01:46 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:01:48 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:01:48 [http-nio-8080-exec-4] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2025-05-21 17:02:01 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:01 [http-nio-8080-exec-10] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2025-05-21 17:02:16 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:16 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:18 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:18 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:20 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:20 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:21 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:21 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:25 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:02:25 [http-nio-8080-exec-2] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2025-05-21 17:03:24 [main] INFO  com.todo.todolist.TodolistApplication - Starting TodolistApplication using Java 11.0.27 on hamza-IdeaPad-5-15IAL7 with PID 50226 (/home/hamza/practice/todo/backend/target/classes started by hamza in /home/hamza/practice/todo/backend)
+2025-05-21 17:03:24 [main] INFO  com.todo.todolist.TodolistApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-21 17:03:25 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-21 17:03:25 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2025-05-21 17:03:26 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-21 17:03:26 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-21 17:03:26 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-21 17:03:26 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-05-21 17:03:26 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-21 17:03:26 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1414 ms
+2025-05-21 17:03:27 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7de147e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12567179, org.springframework.security.web.context.SecurityContextPersistenceFilter@5fdd97c1, org.springframework.security.web.header.HeaderWriterFilter@509a6095, org.springframework.web.filter.CorsFilter@37d699a1, org.springframework.security.web.authentication.logout.LogoutFilter@16681017, com.todo.todolist.secuirty.JwtAuthFilter@7f977fba, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@54895681, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15d236fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@584ca390, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f42b194, org.springframework.security.web.session.SessionManagementFilter@5396eeb1, org.springframework.security.web.access.ExceptionTranslationFilter@79252c83, org.springframework.security.web.access.intercept.AuthorizationFilter@7f12094d]
+2025-05-21 17:03:28 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-21 17:03:28 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-21 17:03:28 [main] INFO  com.todo.todolist.TodolistApplication - Started TodolistApplication in 3.559 seconds (JVM running for 4.494)
+2025-05-21 17:03:31 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-21 17:03:31 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-21 17:03:31 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-21 17:03:31 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:03:31 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:03:54 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:04:28 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:04:44 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2025-05-21 17:04:48 [http-nio-8080-exec-8] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2025-05-21 17:05:38 [main] INFO  com.todo.todolist.TodolistApplication - Starting TodolistApplication using Java 11.0.27 on hamza-IdeaPad-5-15IAL7 with PID 50476 (/home/hamza/practice/todo/backend/target/classes started by hamza in /home/hamza/practice/todo/backend)
+2025-05-21 17:05:38 [main] INFO  com.todo.todolist.TodolistApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-21 17:05:39 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-21 17:05:39 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2025-05-21 17:05:39 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-21 17:05:39 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-21 17:05:39 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-21 17:05:39 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-05-21 17:05:39 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-21 17:05:39 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1254 ms
+2025-05-21 17:05:40 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4d7cac24, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@409732fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@31ab1e67, org.springframework.security.web.header.HeaderWriterFilter@5cff729b, org.springframework.web.filter.CorsFilter@73d62b5, org.springframework.security.web.authentication.logout.LogoutFilter@747f6c5a, com.todo.todolist.secuirty.JwtAuthFilter@20d19f2c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@282c4da0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3487442d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a3f96ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e99e2cb, org.springframework.security.web.session.SessionManagementFilter@3e14d390, org.springframework.security.web.access.ExceptionTranslationFilter@22cb3d59, org.springframework.security.web.access.intercept.AuthorizationFilter@5e2a6991]
+2025-05-21 17:05:41 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-21 17:05:41 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-21 17:05:41 [main] INFO  com.todo.todolist.TodolistApplication - Started TodolistApplication in 2.926 seconds (JVM running for 3.572)
+2025-05-21 17:05:44 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-21 17:05:44 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-21 17:05:44 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-21 17:05:44 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.AuthController - Start login API with userEmail menna@gmail.com
+2025-05-21 17:05:45 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.AuthController - End login API
+2025-05-21 17:05:45 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - Start Service Login
+2025-05-21 17:05:45 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - Finished Finding user
+2025-05-21 17:05:45 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - Start Finding Valid Token
+2025-05-21 17:05:45 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - End Finding Valid Token
+2025-05-21 17:05:45 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - End Login Service
+2025-05-21 17:05:45 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:45 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:48 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:48 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:53 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:53 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:54 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:54 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:56 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:05:56 [http-nio-8080-exec-1] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2025-05-21 17:06:12 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:06:12 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2025-05-21 17:08:42 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:08:42 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:08:43 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:08:43 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:09:33 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:09:33 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:09:39 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:09:39 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:09:50 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:09:50 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:09:50 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:09:50 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:25 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:26 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:13:26 [http-nio-8080-exec-9] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:13:26 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:26 [http-nio-8080-exec-9] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:13:26 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:26 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:13:26 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:13:26 [http-nio-8080-exec-9] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:13:26 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:13:26 [http-nio-8080-exec-9] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:13:34 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:13:34 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:13:34 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:34 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:34 [http-nio-8080-exec-3] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:13:34 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:13:35 [http-nio-8080-exec-3] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:13:35 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:13:35 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:13:35 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:13:39 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:13:39 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:13:39 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:39 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:13:39 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:39 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:13:39 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:13:39 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:13:39 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:13:39 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:13:43 [http-nio-8080-exec-2] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:13:43 [http-nio-8080-exec-1] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:13:43 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:43 [http-nio-8080-exec-2] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:13:43 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:13:43 [http-nio-8080-exec-1] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:13:43 [http-nio-8080-exec-2] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:13:43 [http-nio-8080-exec-2] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:13:43 [http-nio-8080-exec-1] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:13:43 [http-nio-8080-exec-1] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:16:39 [main] INFO  com.todo.todolist.TodolistApplication - Starting TodolistApplication using Java 11.0.27 on hamza-IdeaPad-5-15IAL7 with PID 51458 (/home/hamza/practice/todo/backend/target/classes started by hamza in /home/hamza/practice/todo/backend)
+2025-05-21 17:16:39 [main] INFO  com.todo.todolist.TodolistApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-21 17:16:40 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-21 17:16:40 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2025-05-21 17:16:40 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-21 17:16:40 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-21 17:16:40 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-21 17:16:40 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-05-21 17:16:40 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-21 17:16:40 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1308 ms
+2025-05-21 17:16:41 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f96dd64, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d7cac24, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b999ee8, org.springframework.security.web.header.HeaderWriterFilter@33e4b9c4, org.springframework.web.filter.CorsFilter@409732fb, org.springframework.security.web.authentication.logout.LogoutFilter@686cf8ad, com.todo.todolist.secuirty.JwtAuthFilter@20d19f2c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@b506ed0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29bbc391, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@530ee28b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73d62b5, org.springframework.security.web.session.SessionManagementFilter@b022551, org.springframework.security.web.access.ExceptionTranslationFilter@3b4ef59f, org.springframework.security.web.access.intercept.AuthorizationFilter@426c0486]
+2025-05-21 17:16:42 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-21 17:16:42 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-21 17:16:42 [main] INFO  com.todo.todolist.TodolistApplication - Started TodolistApplication in 2.995 seconds (JVM running for 3.634)
+2025-05-21 17:16:49 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-21 17:16:49 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-21 17:16:49 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-21 17:16:49 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:16:49 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:16:51 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:16:51 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:16:56 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:16:56 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:16:56 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:16:56 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:31 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:31 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:34 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:17:34 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:17:34 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:34 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:34 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:17:34 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:17:34 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:17:34 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:17:34 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:17:34 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:17:53 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:17:53 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:17:53 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:53 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:53 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:17:53 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:17:53 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:17:53 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:17:53 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:17:53 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:17:59 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:17:59 [http-nio-8080-exec-2] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:17:59 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:59 [http-nio-8080-exec-3] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:17:59 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:17:59 [http-nio-8080-exec-2] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:17:59 [http-nio-8080-exec-3] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:17:59 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:17:59 [http-nio-8080-exec-2] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:17:59 [http-nio-8080-exec-2] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:05 [http-nio-8080-exec-6] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:05 [http-nio-8080-exec-5] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:05 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:05 [http-nio-8080-exec-6] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:05 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:05 [http-nio-8080-exec-5] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:05 [http-nio-8080-exec-6] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:05 [http-nio-8080-exec-6] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:05 [http-nio-8080-exec-5] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:05 [http-nio-8080-exec-5] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:06 [http-nio-8080-exec-1] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:06 [http-nio-8080-exec-9] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:06 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:06 [http-nio-8080-exec-1] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:06 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:06 [http-nio-8080-exec-9] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:06 [http-nio-8080-exec-1] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:06 [http-nio-8080-exec-1] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:06 [http-nio-8080-exec-9] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:06 [http-nio-8080-exec-9] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:12 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:12 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:12 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:12 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:12 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:12 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:12 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:12 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:12 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:12 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:19 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:19 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:19 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:19 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:19 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:19 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:19 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:19 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:19 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:19 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:21 [http-nio-8080-exec-2] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:21 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:21 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:21 [http-nio-8080-exec-2] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:21 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:21 [http-nio-8080-exec-3] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:21 [http-nio-8080-exec-2] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:21 [http-nio-8080-exec-2] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:21 [http-nio-8080-exec-3] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:21 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:24 [http-nio-8080-exec-6] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:24 [http-nio-8080-exec-5] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:24 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:24 [http-nio-8080-exec-6] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:24 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:24 [http-nio-8080-exec-5] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:24 [http-nio-8080-exec-6] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:24 [http-nio-8080-exec-5] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:24 [http-nio-8080-exec-6] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:24 [http-nio-8080-exec-5] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:37 [http-nio-8080-exec-1] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:37 [http-nio-8080-exec-9] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:37 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:37 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:37 [http-nio-8080-exec-1] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:37 [http-nio-8080-exec-9] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:37 [http-nio-8080-exec-1] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:37 [http-nio-8080-exec-1] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:37 [http-nio-8080-exec-9] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:37 [http-nio-8080-exec-9] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:41 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:41 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:41 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:41 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:41 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:41 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:41 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:41 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:41 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:41 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:54 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:54 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:54 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:54 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:54 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:54 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:54 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:54 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:54 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:54 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:58 [http-nio-8080-exec-5] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:58 [http-nio-8080-exec-6] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:18:58 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:58 [http-nio-8080-exec-5] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:58 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:18:58 [http-nio-8080-exec-6] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:18:58 [http-nio-8080-exec-5] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:58 [http-nio-8080-exec-6] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:18:58 [http-nio-8080-exec-5] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:18:58 [http-nio-8080-exec-6] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:19:08 [http-nio-8080-exec-9] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:19:08 [http-nio-8080-exec-1] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:19:08 [http-nio-8080-exec-9] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:19:08 [http-nio-8080-exec-9] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:19:08 [http-nio-8080-exec-1] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:19:08 [http-nio-8080-exec-1] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:19:08 [http-nio-8080-exec-9] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:19:08 [http-nio-8080-exec-9] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:19:08 [http-nio-8080-exec-1] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:19:08 [http-nio-8080-exec-1] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:19:28 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:19:28 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:19:28 [http-nio-8080-exec-4] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:19:28 [http-nio-8080-exec-10] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:19:28 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:19:28 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:19:28 [http-nio-8080-exec-4] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:19:28 [http-nio-8080-exec-4] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:19:28 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:19:28 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:19:47 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:19:47 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:19:47 [http-nio-8080-exec-7] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:19:47 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:19:47 [http-nio-8080-exec-8] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:19:47 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:19:47 [http-nio-8080-exec-7] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:19:47 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:19:47 [http-nio-8080-exec-8] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:19:47 [http-nio-8080-exec-8] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:20:05 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:20:05 [http-nio-8080-exec-2] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:20:05 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:20:05 [http-nio-8080-exec-3] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:20:05 [http-nio-8080-exec-2] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:20:05 [http-nio-8080-exec-2] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:20:05 [http-nio-8080-exec-3] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:20:05 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:20:05 [http-nio-8080-exec-2] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:20:05 [http-nio-8080-exec-2] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:20:45 [http-nio-8080-exec-6] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:20:45 [http-nio-8080-exec-5] INFO  com.todo.todolist.controller.TaskController - START_TASKS_USERS_API
+2025-05-21 17:20:45 [http-nio-8080-exec-5] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:20:45 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 17:20:45 [http-nio-8080-exec-5] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:20:45 [http-nio-8080-exec-6] INFO  com.todo.todolist.service.TaskService - START_USERS_TASKS_SERVICE
+2025-05-21 17:20:45 [http-nio-8080-exec-6] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:20:45 [http-nio-8080-exec-5] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
+2025-05-21 17:20:45 [http-nio-8080-exec-6] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 17:20:45 [http-nio-8080-exec-5] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API

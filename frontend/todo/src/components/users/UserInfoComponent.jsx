@@ -1,13 +1,12 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "../../api/axios";
-
+import ChangePermission from "../admin/ChangePerimissionComponent";
 
 
 export default function UserInfo() {
     const [user, setUser] = useState(null);
     const { userId } = useParams();
-    const navigate = useNavigate();
 
     async function fetchUserById(userId) {
         try {
@@ -22,33 +21,25 @@ export default function UserInfo() {
         fetchUserById(userId);
     }, []);
 
-    async function changeUserPermission(userId, type) {
-        try {
-            const resp = await axios("/admin/change-type", {
-                params: {
-                    id: userId,
-                    type: type
-                }
-            });
-            console.log("TYPE_CHANGED", resp.data);
-        } catch (error) {
-            console.log(error.response?.data || error.message);
-        }
-    }
-    async function deleteUserRequest(userId) {
-        try {
-            const resp = await axios.delete(`/admin/requests/${userId}`);
-            console.log(resp.data);
-        } catch (error) {
-            console.log(error.response?.data || error.message);
-        }
-    }
+    // async function changeUserPermission(userId, type) {
+    //     try {
+    //         const resp = await axios("/admin/change-type", {
+    //             params: {
+    //                 id: userId,
+    //                 type: type
+    //             }
+    //         });
+    //         console.log("TYPE_CHANGED", resp.data);
+    //     } catch (error) {
+    //         console.log(error.response?.data || error.message);
+    //     }
+    // }
 
     return (
         <div className="container mt-5">
             <div className="d-flex m-2 justify-content-between">
-                <button className="btn btn-danger" onClick={() => { changeUserPermission(userId, 2), deleteUserRequest(userId), navigate("/tokens/user") }}>Suspend</button>
-                <button className="btn btn-success" onClick={() => { changeUserPermission(userId, 1), deleteUserRequest(userId), navigate("/tokens/user") }}>Approve</button>
+                <ChangePermission userId={userId} type={2}/>
+                <ChangePermission userId={userId} type={1}/>
             </div>
             <div className="card shadow-lg border-0 rounded-4 bg-light">
                 <div className="card-header bg-success text-white text-center rounded-top-4">

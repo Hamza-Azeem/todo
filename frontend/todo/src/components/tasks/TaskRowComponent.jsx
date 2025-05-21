@@ -1,6 +1,6 @@
 import { useState } from "react";
-import AdminUpdateTask from "../admin/AdminUpdateTask";
-import AdminDeleteTask from "../admin/AdminDeleteTask";
+import AdminUpdateTask from "../admin/AdminUpdateTaskComponent";
+import AdminDeleteTask from "../admin/AdminDeleteTaskComponent";
 
 export default function TaskRow({ task, fetchUsers }) {
     const [taskUpdated, setTaskUpdated] = useState({ ...task });

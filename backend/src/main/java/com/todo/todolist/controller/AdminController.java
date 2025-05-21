@@ -1,6 +1,6 @@
 package com.todo.todolist.controller;
 
-import base.BaseResponse;
+import com.todo.todolist.base.BaseResponse;
 import com.todo.todolist.dto.TaskDto;
 import com.todo.todolist.service.AdminService;
 import com.todo.todolist.service.TaskService;
@@ -22,7 +22,7 @@ public class AdminController {
 
 
     @GetMapping("/change-type")
-    public ResponseEntity<String> changeUserType(@RequestParam(required = true) int id
+    public ResponseEntity<String> changeUserType(@RequestParam(required = true) String id
             , @RequestParam(defaultValue = "0") int type){
         return ResponseEntity.ok(adminService.changeUserStatus(type, id));
     }

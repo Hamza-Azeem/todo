@@ -1,13 +1,11 @@
 package com.todo.todolist.controller;
 
-import base.BaseResponse;
+import com.todo.todolist.base.BaseResponse;
 import com.todo.todolist.dto.PermissionRequestDto;
 import com.todo.todolist.service.PermissionRequestService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/admin/requests")

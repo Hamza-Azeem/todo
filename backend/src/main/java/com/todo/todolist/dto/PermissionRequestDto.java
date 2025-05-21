@@ -1,6 +1,5 @@
 package com.todo.todolist.dto;
 
-import base.BaseResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

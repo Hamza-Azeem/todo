@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "../../api/axios";
-import TaskRow from "../tasks/TaskRowComponent.jsx"; // new component
+import TaskRow from "../tasks/TaskRowComponent.jsx";
+import ChangePermission from "../admin/ChangePerimissionComponent.jsx";
 
 export default function UsersTasks() {
     const [usersTasks, setUsersTasks] = useState();
@@ -22,6 +23,11 @@ export default function UsersTasks() {
         <div className="container mt-5">
             {usersTasks && Object.entries(usersTasks).map(([email, tasks], index) => (
                 <div className="container mb-4" key={index}>
+                    <div className="d-flex justify-content-between m-2">
+                        <ChangePermission userId={email} type={2} />
+                        <ChangePermission userId={email} type={1} />
+                    </div>
+
                     <h4 className="m-2">Email: {email}</h4>
                     <div className="card shadow-sm border-0 rounded-4 bg-white">
                         <div className="card-header bg-primary text-white text-center rounded-top-4">
@@ -40,9 +46,9 @@ export default function UsersTasks() {
                                 <tbody>
                                     {tasks && tasks.length > 0 ? (
                                         tasks.map((task) => (
-                                            <TaskRow key={task.id} 
-                                            fetchUsers={fetchUsersTasks}
-                                            task={task} />
+                                            <TaskRow key={task.id}
+                                                fetchUsers={fetchUsersTasks}
+                                                task={task} />
                                         ))
                                     ) : (
                                         <tr>

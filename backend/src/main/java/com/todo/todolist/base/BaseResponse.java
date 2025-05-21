@@ -1,4 +1,4 @@
-package base;
+package com.todo.todolist.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

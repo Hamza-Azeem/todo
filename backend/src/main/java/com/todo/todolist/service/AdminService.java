@@ -15,9 +15,15 @@ import org.springframework.stereotype.Service;
 public class AdminService {
     private final UserRepository userRepository;
     private final TaskService taskService;
+
     @PreAuthorize("@permissionService.isAdmin()")
-    public String changeUserStatus(int type, int id){
-        User user = userRepository.findUserById(id);
+    public String changeUserStatus(int type, String identifier){
+        User user = null;
+        if(identifier.contains("@.")){
+            user = userRepository.findUserByEmail(identifier);
+        }else{
+            user = userRepository.findUserById(Integer.parseInt(identifier));
+        }
         if(user == null){
             throw new ResourceNotFoundException("User not found");
         }

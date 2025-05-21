@@ -1,7 +1,6 @@
 package com.todo.todolist.service;
 
 import com.todo.todolist.dto.TaskDto;
-import com.todo.todolist.dto.UserDto;
 import com.todo.todolist.dto.admin.UserTaskFlatRowDto;
 import com.todo.todolist.entity.Task;
 import com.todo.todolist.entity.User;

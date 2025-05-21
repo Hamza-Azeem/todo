@@ -1,6 +1,6 @@
 package com.todo.todolist.controller;
 
-import base.BaseResponse;
+import com.todo.todolist.base.BaseResponse;
 import com.todo.todolist.dto.TaskDto;
 import com.todo.todolist.model.TaskCreationRequest;
 import com.todo.todolist.service.TaskService;
