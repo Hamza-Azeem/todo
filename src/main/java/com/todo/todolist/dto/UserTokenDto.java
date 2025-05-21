@@ -10,4 +10,5 @@ import lombok.Data;
 public class UserTokenDto {
     private int userId;
     private String tokenId;
+    private boolean isValid;
 }

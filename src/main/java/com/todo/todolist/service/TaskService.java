@@ -1,6 +1,8 @@
 package com.todo.todolist.service;
 
 import com.todo.todolist.dto.TaskDto;
+import com.todo.todolist.dto.UserDto;
+import com.todo.todolist.dto.admin.UserTaskFlatRowDto;
 import com.todo.todolist.entity.Task;
 import com.todo.todolist.entity.User;
 import com.todo.todolist.exception.ResourceNotFoundException;
@@ -8,24 +10,29 @@ import com.todo.todolist.mapper.TaskMapper;
 import com.todo.todolist.model.TaskCreationRequest;
 import com.todo.todolist.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static com.todo.todolist.mapper.TaskMapper.toTaskDto;
 
 @Service
 @RequiredArgsConstructor
+@Log4j2
 public class TaskService {
     private final TaskRepository repository;
     private final UserService userService;
 
-    public void createTask(TaskCreationRequest request){
+    public TaskDto createTask(TaskCreationRequest request){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(authentication.getName());
         if(!user.getStatus().equals("ACT")){
@@ -36,7 +43,7 @@ public class TaskService {
                 .statusId(request.getStatus())
                 .userId(user.getId())
                 .build();
-        repository.addNewTask(task);
+       return toTaskDto(repository.addNewTask(task));
     }
 
     @PreAuthorize("@permissionService.isSameUser(#userId)")
@@ -50,11 +57,11 @@ public class TaskService {
 
         }
         boolean updated = false;
-        if(taskDto.getName() != null && !taskDto.getName().isBlank()){
+        if(taskDto.getName() != null && !taskDto.getName().isBlank() && !taskDto.getName().equals(task.getName())){
             task.setName(taskDto.getName());
             updated = true;
         }
-        if(taskDto.getStatus() != null && taskDto.getStatus() > 0 && taskDto.getStatus() < 4){
+        if(taskDto.getStatus() != null && taskDto.getStatus() > 0 && taskDto.getStatus() < 4 && taskDto.getStatus() != task.getStatusId()){
             task.setStatusId(taskDto.getStatus());
             updated = true;
         }
@@ -86,6 +93,50 @@ public class TaskService {
     public List<TaskDto> findAllTasks(){
         return repository.findAllTasks()
                 .stream().map(TaskMapper::toTaskDto).collect(Collectors.toList());
+    }
+
+    @PreAuthorize("@permissionService.isAdmin()")
+    public Map<String, List<TaskDto>> findAllUsersWithTasks(){
+        log.info("START_USERS_TASKS_SERVICE");
+        List<UserTaskFlatRowDto> userTaskFlatRowDtos = repository.selectAllUsersWithTheirTasks();
+        log.info("END_USERS_TASKS_SERVICE - FOUND '{}' RESULTS", userTaskFlatRowDtos.size());
+        Map<String, List<TaskDto>> userTaskMap = new HashMap<>();
+        for(UserTaskFlatRowDto userTask: userTaskFlatRowDtos){
+            if (userTaskMap.containsKey(userTask.getEmail())) {
+                List<TaskDto> temp = userTaskMap.get(userTask.getEmail());
+                if (userTask.getTaskId() != null) { // Only add valid tasks
+                    temp.add(toTaskDto(userTask));
+                }
+            } else {
+                List<TaskDto> tasks = new ArrayList<>();
+                if (userTask.getTaskId() != null) {
+                    tasks.add(toTaskDto(userTask));
+                }
+                userTaskMap.put(userTask.getEmail(), tasks);
+            }
+
+        }
+        return userTaskMap;
+    }
+
+    @PreAuthorize("@permissionService.isAdmin()")
+    public void adminUpdateTask(TaskDto taskDto){
+        log.info("START_TASK_SERVICE_ADMIN_UPDATE");
+        log.info("FINDING_THE_TASK");
+        Task task = repository.findTaskById(taskDto.getId());
+        if(task == null){
+            throw new ResourceNotFoundException("Task not found");
+        }
+        log.info("FOUND_TASK");
+        task.setStatusId(taskDto.getStatus());
+        task.setName(taskDto.getName());
+        log.info("END_TASK_SERVICE");
+        repository.adminUpdateTask(task);
+    }
+
+    @PreAuthorize("@permissionService.isAdmin()")
+    public void adminDeleteTask(int taskId){
+        repository.adminDeleteTask(taskId);
     }
 
 

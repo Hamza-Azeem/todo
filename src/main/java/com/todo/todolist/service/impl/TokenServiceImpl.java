@@ -1,6 +1,7 @@
 package com.todo.todolist.service.impl;
 
 import com.todo.todolist.dto.UserDto;
+import com.todo.todolist.dto.UserTokenDto;
 import com.todo.todolist.dto.admin.UserTasksDto;
 import com.todo.todolist.entity.User;
 import com.todo.todolist.entity.UserToken;
@@ -17,6 +18,8 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.util.List;
 
+import static com.todo.todolist.mapper.UserTokenMapper.toUserTokenDto;
+
 @Service
 @RequiredArgsConstructor
 public class TokenServiceImpl implements TokenService {
@@ -26,9 +29,10 @@ public class TokenServiceImpl implements TokenService {
     private final UserService userService;
     private final TaskService taskService;
 
-    @PreAuthorize("@permissionService.isAdmin()")
+
     @Override
-    public UserTasksDto getUserFromToken(String token) {
+    public UserTasksDto getUserFromToken(String authHeader) {
+        String token = authHeader.substring(7);
         UserToken userToken = repository.getUserFromToken(token);
         UserDto userDto = userService.findUserById(userToken.getUserId());
 
@@ -75,10 +79,13 @@ public class TokenServiceImpl implements TokenService {
     }
 
 
-    @PreAuthorize("@permissionService.isAdmin()")
+//    @PreAuthorize("@permissionService.isAdmin()")
     @Override
-    public UserToken findTokenByTokenId(String tokenId) {
-        return repository.findTokenByTokenId(tokenId);
+    public UserTokenDto findTokenByTokenId(String tokenId) {
+        if(tokenId.startsWith("Bearer ")){
+            tokenId = tokenId.substring(7);
+        }
+        return toUserTokenDto(repository.findTokenByTokenId(tokenId));
     }
 
     @PreAuthorize("@permissionService.isAdmin()")
@@ -97,11 +104,27 @@ public class TokenServiceImpl implements TokenService {
 
     @Override
     public Boolean isTokenValid(String token) {
+        if(token.startsWith("Bearer ")){
+            token = token.substring(7);
+        }
         UserToken userToken = repository.findUserTokenByTokenId(token);
         if (userToken == null){
             throw new InvalidTokenException("TOKEN NOT FOUND");
         }
-        return userToken.getIsValid() && userToken.getExpiresAt().isAfter(Instant.now());
+        boolean valid = userToken.getIsValid() && userToken.getExpiresAt().isAfter(Instant.now());
+        if(valid){
+            return true;
+        }
+        disableToken(userToken.getTokenId());
+        return false;
+    }
+
+    public UserTokenDto findValidUserToken(int userId){
+        UserToken userToken = repository.findValidUserToken(userId);
+        if(userToken == null){
+            return null;
+        }
+        return toUserTokenDto(userToken);
     }
 
 

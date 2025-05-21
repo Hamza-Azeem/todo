@@ -1,5 +1,7 @@
 package com.todo.todolist.repository;
 
+import com.todo.todolist.dto.admin.UserTaskFlatRowDto;
+import com.todo.todolist.dto.admin.UserTasksDto;
 import com.todo.todolist.entity.Task;
 import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
 import org.jdbi.v3.sqlobject.customizer.Bind;
@@ -30,13 +32,25 @@ public interface TaskRepository {
     @SqlUpdate("INSERT INTO tasks(name, user_id, status_id) values(:name, :userId, :statusId)")
     @GetGeneratedKeys
     @RegisterBeanMapper(Task.class)
-    int addNewTask(@BindBean Task task);
+    Task addNewTask(@BindBean Task task);
 
     @SqlUpdate("UPDATE tasks SET name = :name, status_id = :statusId WHERE user_id = :userId AND task_id = :taskId")
     @RegisterBeanMapper(Task.class)
-    int updateTask(@BindBean Task task);
+    Integer updateTask(@BindBean Task task);
 
     @SqlUpdate("DELETE FROM tasks WHERE task_id = :task_id")
     void deleteTaskById(@Bind int task_id);
+
+    @SqlQuery("select * from tasks RIGHT JOIN users ON tasks.user_id = users.id")
+    @RegisterBeanMapper(UserTaskFlatRowDto.class)
+    List<UserTaskFlatRowDto> selectAllUsersWithTheirTasks();
+
+    @SqlUpdate("UPDATE tasks SET name = :name, status_id = :statusId WHERE task_id = :taskId")
+    @RegisterBeanMapper(Task.class)
+    Integer adminUpdateTask(@BindBean Task task);
+
+    @SqlUpdate("DELETE FROM tasks WHERE task_id = :taskId")
+    @RegisterBeanMapper(Task.class)
+    Integer adminDeleteTask(@Bind int taskId);
 
 }

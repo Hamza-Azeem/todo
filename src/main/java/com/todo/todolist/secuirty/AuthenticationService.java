@@ -1,12 +1,15 @@
 package com.todo.todolist.secuirty;
 
+import com.todo.todolist.controller.AuthController;
+import com.todo.todolist.dto.UserTokenDto;
 import com.todo.todolist.entity.User;
-import com.todo.todolist.entity.UserToken;
 import com.todo.todolist.exception.DuplicateResourceException;
 import com.todo.todolist.model.UserRegistrationRequest;
 import com.todo.todolist.service.TokenService;
 import com.todo.todolist.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -21,6 +24,8 @@ public class AuthenticationService implements UserDetailsService {
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
+    private static Logger logger = LoggerFactory.getLogger(AuthenticationService.class);
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -36,30 +41,24 @@ public class AuthenticationService implements UserDetailsService {
     }
 
     public String loginUser(Authentication authentication) {
+        logger.info("Start Service Login");
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         User user = userService.findUserByEmail(userDetails.getUsername());
-
+        logger.info("Finished Finding user");
         if (user == null) {
             throw new UsernameNotFoundException("User not found");
         }
-
-        UserToken token = getValidTokenForUser(user);
+        logger.info("Start Finding Valid Token");
+        UserTokenDto token = tokenService.findValidUserToken(user.getId());
 
         if (token == null) {
+            logger.info("Generating New Token");
             return tokenService.saveUserToken(user);  // Returns a new tokenId
         }
-
+        logger.info("End Finding Valid Token");
+        logger.info("End Login Service");
         return token.getTokenId();  // Return existing valid token's ID
     }
-
-    private UserToken getValidTokenForUser(User user) {
-        return tokenService.findAllTokensByUserId(user.getId())
-                .stream()
-                .filter(tokenService::isTokenValid)
-                .findFirst()
-                .orElse(null);
-    }
-
 
     public void addNewUser(UserRegistrationRequest registrationRequest) {
         if (userService.userExistsByEmail(registrationRequest.getEmail())) {

@@ -45,5 +45,8 @@ public interface UserTokenRepository {
     @RegisterBeanMapper(UserToken.class)
     Integer invalidateAllTokensForUserByUserId(@Bind int userId);
 
+    @SqlQuery("SELECT * FROM user_tokens WHERE is_valid = true AND user_id = :userId")
+    UserToken findValidUserToken(@Bind int userId);
+
 
 }

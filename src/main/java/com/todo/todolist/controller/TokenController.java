@@ -13,7 +13,7 @@ import java.time.Instant;
 import java.util.List;
 
 @RestController
-@RequestMapping("admin/tokens")
+@RequestMapping("/tokens")
 @RequiredArgsConstructor
 public class TokenController {
     private final TokenService tokenService;
@@ -24,11 +24,21 @@ public class TokenController {
         return tokenService.findAllTokensByUserId(id);
     }
 
+    // returns both user and his tasks
     @GetMapping("/user")
     @ResponseStatus(code = HttpStatus.OK)
-    public UserTasksDto findUserByToken(@RequestBody UserTokenDto userTokenDto){
-        return tokenService.getUserFromToken(userTokenDto.getTokenId());
+    public UserTasksDto findUserByToken(@RequestHeader("Authorization") String authHeader){
+        return tokenService.getUserFromToken(authHeader);
     }
+
+    // returns only the user token entity
+    // todo: Change entity to DTO
+    @GetMapping("/user-token")
+    @ResponseStatus(code = HttpStatus.OK)
+    public UserTokenDto findUserTokenByToken(@RequestHeader("Authorization") String authHeader){
+        return tokenService.findTokenByTokenId(authHeader);
+    }
+
 
     @GetMapping("/disable")
     @ResponseStatus(code = HttpStatus.OK)
@@ -42,6 +52,12 @@ public class TokenController {
     public String enableUserToken(@RequestBody UserTokenDto userTokenDto){
         tokenService.activateToken(userTokenDto.getTokenId());
         return "TOKEN_ACTIVATED";
+    }
+
+    @GetMapping
+    @ResponseStatus(code = HttpStatus.OK)
+    public boolean checkTokenValidity(@RequestHeader("Authorization") String authHeader){
+        return tokenService.isTokenValid(authHeader);
     }
 
 

@@ -1,17 +1,20 @@
 package com.todo.todolist.service;
 
+import com.todo.todolist.dto.TaskDto;
 import com.todo.todolist.entity.User;
 import com.todo.todolist.exception.ResourceNotFoundException;
 import com.todo.todolist.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Log4j2
 public class AdminService {
     private final UserRepository userRepository;
-
+    private final TaskService taskService;
     @PreAuthorize("@permissionService.isAdmin()")
     public String changeUserStatus(int type, int id){
         User user = userRepository.findUserById(id);
@@ -31,6 +34,16 @@ public class AdminService {
         }
         userRepository.updateUser(user);
         return "User type updated.";
+    }
+
+    public void updateUserTask(TaskDto taskDto){
+        log.info("START_ADMIN_TASK_UPDATE_SERVICE");
+        taskService.adminUpdateTask(taskDto);
+        log.info("END_ADMIN_TASK_UPDATE_SERVICE");
+    }
+
+    public void deleteUserTask(int taskId){
+        taskService.adminDeleteTask(taskId);
     }
 
 }

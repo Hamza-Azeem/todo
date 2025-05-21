@@ -1,9 +1,6 @@
 package com.todo.todolist.configuration;
 
-import com.todo.todolist.repository.TaskRepository;
-import com.todo.todolist.repository.TaskStatusRepository;
-import com.todo.todolist.repository.UserRepository;
-import com.todo.todolist.repository.UserTokenRepository;
+import com.todo.todolist.repository.*;
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.postgres.PostgresPlugin;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
@@ -56,5 +53,10 @@ public class DatasourceConfig {
     @Bean
     public UserTokenRepository userTokenRepository(Jdbi jdbi) {
         return jdbi.onDemand(UserTokenRepository.class);
+    }
+
+    @Bean
+    public PermissionRequestRepository permissionRequestRepository(Jdbi jdbi) {
+        return jdbi.onDemand(PermissionRequestRepository.class);
     }
 }
