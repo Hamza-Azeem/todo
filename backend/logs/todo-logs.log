@@ -3469,3 +3469,11 @@ java.lang.UnsupportedOperationException: null
 2025-05-21 15:30:42 [http-nio-8080-exec-7] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
 2025-05-21 15:30:42 [http-nio-8080-exec-10] INFO  com.todo.todolist.service.TaskService - END_USERS_TASKS_SERVICE - FOUND '16' RESULTS
 2025-05-21 15:30:42 [http-nio-8080-exec-10] INFO  com.todo.todolist.controller.TaskController - END_TASKS_USERS_API
+2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.AuthController - Start login API with userEmail menna@gmail.com
+2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.controller.AuthController - End login API
+2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - Start Service Login
+2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - Finished Finding user
+2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - Start Finding Valid Token
+2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.AuthenticationService - Generating New Token
+2025-05-21 16:38:24 [http-nio-8080-exec-6] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
+2025-05-21 16:38:24 [http-nio-8080-exec-3] INFO  com.todo.todolist.secuirty.PermissionService - ADMIN_ENDPOINT_ACCESSED_BY menna@gmail.com THAT_HAS_ROLE ADMIN
